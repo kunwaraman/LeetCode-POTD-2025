@@ -1,6 +1,6 @@
 /*
 time complexity : O(2^n)
-space complexity: O(n)
+space complexity: O(n!)
  */
 import java.util.*;
 public class SumOfAllSubsetsXorTotal {
@@ -31,5 +31,22 @@ public class SumOfAllSubsetsXorTotal {
         inside.remove(inside.size()-1);
         recur(nums,i+1,list,inside);
 
+    }
+    /*
+    time complexity: O(2^n)
+    space complexity: O(n)
+     */
+    public int subsetXORSumAnther(int[] nums) {
+        int n = nums.length;
+        return recur(nums,0,0);
+    }
+    public int recur(int nums[],int i,int xorcount){
+        int n = nums.length;
+        if(i>=n){
+            return xorcount;
+        }
+        int take=recur(nums,i+1,nums[i]^xorcount);
+        int nontake=recur(nums,i+1,xorcount);
+        return take+nontake;
     }
 }
