@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/April2025/April2025.iml" filepath="$PROJECT_DIR$/April2025/April2025.iml" />
+      <module fileurl="file://$PROJECT_DIR$/June2025/June2025.iml" filepath="$PROJECT_DIR$/June2025/June2025.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LeetCodeApril-2025To--.iml" filepath="$PROJECT_DIR$/.idea/LeetCodeApril-2025To--.iml" />
       <module fileurl="file://$PROJECT_DIR$/May2025/May2025.iml" filepath="$PROJECT_DIR$/May2025/May2025.iml" />
     </modules>
