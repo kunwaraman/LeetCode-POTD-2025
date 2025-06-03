@@ -26,5 +26,7 @@ public class Candy {
             count+=Math.max(l2r[i],r2l[i]);
         }
         return count;
+
     }
+
 }
