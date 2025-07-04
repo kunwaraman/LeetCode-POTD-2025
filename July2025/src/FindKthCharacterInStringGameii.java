@@ -1,0 +1,34 @@
+/*
+time complexity: O(n*log(k))
+space complexity: O(log(k))
+ */
+
+public class FindKthCharacterInStringGameii {
+    public char kthCharacter(long k, int[] operations) {
+        if(k==1){
+            return 'a';
+        }
+        int n = operations.length;
+        long len=1;
+        long newk=-1;
+        int operationtype=-1;
+        for(int i=0;i<n;i++){
+            len*=2;
+            if(len>=k){
+                operationtype=operations[i];
+                newk=k-len/2;
+                break;
+
+            }
+        }
+        char ch=kthCharacter(newk,operations);
+        if(operationtype==0){
+            return ch;
+        }
+        if(ch=='z'){
+            return 'a';
+        }
+        return (char)(ch+1);
+
+    }
+}
