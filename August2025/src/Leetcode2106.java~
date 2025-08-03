@@ -1,0 +1,7 @@
+/*
+time complexity: O(k*long(n))
+space complexity: O(n)
+ */
+
+public class Leetcode2106 {
+}
