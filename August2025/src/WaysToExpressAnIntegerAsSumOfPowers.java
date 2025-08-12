@@ -1,0 +1,31 @@
+import java.util.*;
+/*
+time complexity: O(n*n)
+space complexity: O(n*n)
+ */
+
+public class WaysToExpressAnIntegerAsSumOfPowers {
+    int M = (int)1e9+7;
+    int dp[][] = new int[301][301];
+    public int numberOfWays(int n, int x) {
+        for(int d[]:dp){
+            Arrays.fill(d,-1);
+        }
+        return recur(n,1,x);
+    }
+    public int recur(int n,int num,int x){
+        if(n==0){
+            return 1;
+        }
+        if((int)Math.pow(num,x)>n){
+            return 0;
+        }
+        if(dp[n][num]!=-1){
+            return dp[n][num];
+        }
+        int take=recur(n-(int)Math.pow(num,x),num+1,x);
+        int skip=recur(n,num+1,x);
+        return dp[n][num]= (take+skip)%M;
+
+    }
+}
