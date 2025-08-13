@@ -1,6 +1,6 @@
 /*
 time complexity: O(logn)
-space complexity: O(1)
+space complexity: O(logn)
  */
 
 public class PowerOfThree {
