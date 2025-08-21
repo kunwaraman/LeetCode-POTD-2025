@@ -1,6 +1,6 @@
 /*
 time complexity: O(m^2*n)
-space complexity: O(n)
+space complexity: O(m*n)
  */
 import java.util.*;
 
