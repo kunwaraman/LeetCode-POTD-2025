@@ -1,0 +1,29 @@
+/*
+time complexity: O(m*n)
+space complexity: O(1)
+ */
+
+
+public class FindMinimumAreaToCoverAllOnes {
+    public int minimumArea(int[][] grid) {
+        int m = grid.length;
+        int n = grid[0].length;
+        int minrow=m; // assign m and -1; initially
+        int maxrow=-1;
+        int mincol=n;
+        int maxcol=-1;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(grid[i][j]==1){
+                    minrow=Math.min(minrow,i);
+                    maxrow=Math.max(maxrow,i);
+                    mincol=Math.min(mincol,j);
+                    maxcol=Math.max(maxcol,j);
+                }
+            }
+        }
+        int width=maxrow-minrow+1;
+        int len=maxcol-mincol+1;
+        return len*width;
+    }
+}
