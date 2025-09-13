@@ -1,0 +1,30 @@
+import java.util.*;
+/*
+time complexity: O(n)
+space complexity: O(100) says constant roughly
+ */
+
+public class FindMostFrequentVowelAndConsonant {
+    public int maxFreqSum(String s) {
+        int n = s.length();
+        HashMap<Character,Integer> map = new HashMap<>();
+        for(char ch:s.toCharArray()){
+            map.put(ch,map.getOrDefault(ch,0)+1);
+        }
+        int mv=0;
+        int mc=0;
+        for(Map.Entry<Character,Integer> entry:map.entrySet()){
+            char ky=entry.getKey();
+            int val=entry.getValue();
+            if(isvowel(ky)){
+                mv=Math.max(mv,val);
+            }else{
+                mc=Math.max(mc,val);
+            }
+        }
+        return mv+mc;
+    }
+    public boolean isvowel(char ch){
+        return ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u';
+    }
+}
