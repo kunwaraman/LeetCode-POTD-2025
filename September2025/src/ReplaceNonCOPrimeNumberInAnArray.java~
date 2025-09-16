@@ -1,0 +1,7 @@
+/*
+time complexity: O(n*log(max))
+space complexity: O(n)
+ */
+
+public class ReplaceNonCOPrimeNumberInAnArray {
+}
